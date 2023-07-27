@@ -1,0 +1,25 @@
+<p>products works!</p>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <ul class="list-group">
+                <li class="list-group-item"  
+                *ngFor="let prod of allData"
+                [queryParams]="{canEdit : prod.userRole}"
+                [routerLink]="['/products', prod.pid]"
+                >
+                {{prod.pname}}
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-8">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+
+
+

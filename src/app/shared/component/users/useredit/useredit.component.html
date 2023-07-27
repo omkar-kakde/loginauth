@@ -1,0 +1,11 @@
+
+<div class="card">
+    <div class="card-body">
+           <input type="text" [disabled]="qp.includes('user')"   #username [value]="userObj.username"  class="form-control mb-3">
+           <input type="text" #userId [value]="userObj.userId" class="form-control">
+    </div>
+    <div>
+        <button class="btn btn-primary" (click)="updateObj(username,userId)">Update</button>
+    </div>
+</div>
+

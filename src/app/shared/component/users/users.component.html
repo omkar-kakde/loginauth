@@ -1,0 +1,17 @@
+
+<div class="row">
+    <div class="col-md-4">
+        <ul class="list-group">
+            <li class="list-group-item"
+            [queryParams]="{canEdit : user.userRole}"
+            [routerLink]= "['/users',user.userId]"
+            *ngFor="let user of userObj">
+                    {{user.username}}
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-8">
+        <router-outlet></router-outlet>
+    </div>
+    
+</div>
